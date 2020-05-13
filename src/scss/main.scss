@@ -1,3 +1,6 @@
-body {
-    background-color: #000;
-}
+// Setup iniziale
+@import "partials/variables";
+@import "partials/common";
+
+// Page section
+@import "partials/header";
