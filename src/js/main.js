@@ -1,0 +1,1 @@
+console.log('Sono stato inserito correttamente');
