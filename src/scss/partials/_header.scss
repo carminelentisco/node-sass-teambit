@@ -1,0 +1,110 @@
+
+.header {
+    background-color: #fff;
+    .header-nav {
+        height: 75px;
+        padding: 0 15px;
+        border-bottom: 1px solid $brown;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        & img {
+            cursor: pointer;
+        }
+
+        & .menu-icon {
+            font-size: 20px;
+            color: $brown;
+            cursor: pointer;
+        }
+
+        & .menu-container {
+            display: none;
+        }
+
+    }
+
+}
+
+@media (min-width: 768px) { 
+    .header {
+        .header-nav {
+            .menu-icon {
+                display: none;
+            }
+    
+            .menu-container {
+                display: block;
+            }
+        }
+  
+    }
+
+    .menu-list {
+        display:flex;
+        @include vertical-align-flex;
+        
+        li {
+            font-size: 13px;
+            font-weight: bold;
+            display: flex;
+            align-items: flex-start;
+            @include list-style;
+            position: relative;
+  
+            &:hover {
+                color: $blue-menu-hov;
+            }
+            
+        }
+        
+        i {
+            margin-left: 5px;
+        }
+
+        .sub-menu {
+            display: none;
+            position: absolute;
+            top: 25px;
+            left: 11px;
+            padding: 5px;
+            border-radius: 10px;
+            box-shadow: 0 0 5px #000;
+            background-color: #fff;
+
+            li {
+                padding: 10px;
+            }
+
+        } 
+
+        .google-btn {
+            padding: 5px;
+            border: 1px solid $button-blue;
+            border-radius: 5px;
+            @include vertical-align-flex;
+            transition: background .4s;
+            
+            img {
+                height: 20px;
+                margin-right: 5px;
+            }
+
+            &:hover {
+                background-color: $blue-menu-hov;
+                color: #fff;
+            }
+
+        }
+    }    
+}
+
+
+/*
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) { ... }
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) { ... }
+*/
