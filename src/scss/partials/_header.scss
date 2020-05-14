@@ -50,13 +50,13 @@
             font-weight: bold;
             display: flex;
             align-items: flex-start;
-            @include list-style;
             position: relative;
+            @include list-style;
   
             &:hover {
                 color: $blue-menu-hov;
             }
-            
+
         }
         
         i {
