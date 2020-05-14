@@ -15,7 +15,7 @@
 .second__block {
     padding: 10px;
     display: flex;
-    @include flex (column);
+    @include flex (row);
 
     img {
         width: 100%;
