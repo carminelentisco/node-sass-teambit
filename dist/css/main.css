@@ -7,7 +7,7 @@
 
 body {
   width: 100%;
-  background-color: #fff;
+  background-color: #000;
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
   color: #58402c;
@@ -78,10 +78,10 @@ body {
     font-weight: bold;
     display: flex;
     align-items: flex-start;
+    position: relative;
     list-style: none;
     margin: 0;
     padding: 0 20px;
-    position: relative;
   }
 
   .menu-list li:hover {
@@ -134,5 +134,87 @@ body {
 // Extra large devices (large desktops, 1200px and up)
 @media (min-width: 1200px) { ... }
 */
+
+.jumbotron__section {
+  padding-top: 120px;
+  background-color: #fff;
+}
+
+.jumbotron__section .jumbotron {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.jumbotron__section img {
+  height: 400px;
+}
+
+.jumbotron__sx {
+  width: 100%;
+}
+
+.jumbotron__sx .jumbotron__title {
+  font-size: 50px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.jumbotron__sx .jumbotron__paragraph {
+  margin-top: 20px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.jumbotron__sx .jumbotron__action {
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+}
+
+.jumbotron__sx .jumbotron__action li {
+  display: flex;
+  align-items: center;
+}
+
+.jumbotron__sx .jumbotron__action li:nth-child(2) {
+  padding: 0 10px;
+}
+
+.jumbotron__sx .jumbotron__action li:last-child,
+.jumbotron__sx .jumbotron__action li:first-child {
+  font-size: 13px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  color: #fff;
+  background-color: #30488f;
+}
+
+.jumbotron__sx .jumbotron__action li:last-child:hover,
+.jumbotron__sx .jumbotron__action li:first-child:hover {
+  background-color: #233569;
+}
+
+.jumbotron__sx .jumbotron__action img {
+  height: 100%;
+  height: 20px;
+  padding-right: 10px;
+}
+
+@media (min-width: 992px) {
+  .jumbotron__section .jumbotron {
+    flex-direction: row;
+  }
+
+  .jumbotron__section .jumbotron img {
+    width: 50%;
+  }
+
+  .jumbotron__sx {
+    width: 50%;
+  }
+}
 
 
