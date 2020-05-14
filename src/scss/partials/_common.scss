@@ -1,13 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+/*******************************************************************************
+*                               COMMON                                         *
+*******************************************************************************/
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');    
 
 // GENERAL RULE
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-
 body {
     width: 100%;
     background-color: #000;
@@ -22,15 +23,17 @@ body {
     margin: 0;
     padding: 0 20px;
 }
-
 @mixin vertical-align-flex {
     display: flex;
     align-items: center;
 }
-
-
+@mixin flex ($direction, $aligItems:none, $justify:none) {
+    display: flex;
+    flex-direction: $direction;
+    align-items: $aligItems;
+    justify-content: $justify;
+}
 // Jubotron Utiliy 
-
 @mixin jumbotron__button-action {
     font-size: 13px;
     padding:  5px 10px;
@@ -39,25 +42,15 @@ body {
     background-color: $jumbotron__button-color;
 }
 
-
-
-
+///////////////////////////////////////////////////////////
 @media (min-width: 768px) { 
     .container {
         width: 95%;
         margin: 0 auto;
     }
 }
-
-
-// Large devices (desktops, 992px and up)
 @media (min-width: 992px) {
     .container {
         width: 1100px;    
     } 
 }
-
-/*
-// Extra large devices (large desktops, 1200px and up)
-@media (min-width: 1200px) { ... }
-*/
