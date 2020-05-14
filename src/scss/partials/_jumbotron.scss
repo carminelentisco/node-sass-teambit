@@ -1,0 +1,94 @@
+// Jumbotron
+
+.jumbotron__section {
+    padding-top: 120px;
+    background-color: $white;
+    
+    .jumbotron {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    img {
+       height: 400px; 
+    }
+
+}
+
+.jumbotron__sx {
+
+    width: 100%;
+
+    .jumbotron__title {
+        font-size: 50px;
+        font-weight: bold;
+        text-align: center;
+    }
+
+    .jumbotron__paragraph {
+        margin-top: 20px;
+        font-weight: bold;
+        text-align: center;
+    }
+    
+    .jumbotron__action {
+        margin-top: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        list-style: none;
+
+        li {
+            display: flex;
+            align-items: center;
+
+            &:nth-child(2) {
+                padding: 0 10px
+            }
+
+            &:last-child,
+            &:first-child {
+                @include jumbotron__button-action
+            }
+
+            &:last-child:hover,
+            &:first-child:hover {
+                background-color: $jumbotron__button-color-hov;
+            }
+
+        }
+
+        img {
+            height: 100%;
+            height: 20px;
+            padding-right: 10px;
+        }
+
+    }
+
+}
+
+// Medium devices (tablets, 768px and up)
+// @media (min-width: 768px) { ... }
+
+@media (min-width: 992px) { 
+
+    .jumbotron__section {
+        
+        .jumbotron {
+            flex-direction: row;
+
+            img {
+                width: 50%;
+            }
+        }
+    }
+
+    .jumbotron__sx {
+        width: 50%;
+    }
+}
+
+// Extra large devices (large desktops, 1200px and up)
+// @media (min-width: 1200px) { ... }
