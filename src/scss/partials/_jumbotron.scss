@@ -5,13 +5,15 @@
     background-color: $white;
     
     .jumbotron {
+        padding: 20px;
         display: flex;
         flex-direction: column;
         justify-content: center;
     }
 
-    img {
-       height: 400px; 
+    .jumbotron__img {
+       width: 100%;
+       margin: 20px 0;
     }
 
 }
@@ -69,26 +71,25 @@
 
 }
 
-// Medium devices (tablets, 768px and up)
-// @media (min-width: 768px) { ... }
-
 @media (min-width: 992px) { 
 
     .jumbotron__section {
         
         .jumbotron {
             flex-direction: row;
-
-            img {
+            align-items: center;
+            
+            .jumbotron__img {
                 width: 50%;
+                padding: 20px;
             }
         }
     }
 
     .jumbotron__sx {
         width: 50%;
+
+
     }
 }
 
-// Extra large devices (large desktops, 1200px and up)
-// @media (min-width: 1200px) { ... }
