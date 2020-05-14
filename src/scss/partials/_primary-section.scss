@@ -1,5 +1,12 @@
 .primary__section {
     background-color: $primary__section-background;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    &:last-child h2 {
+        margin-top: 50px;
+    }
 }
 
 .primary__section-up {
@@ -10,6 +17,7 @@
 .primary__first-img-container {
     margin-top: 30px;
     
+    
     .card-container {
         margin-top: 60px;
         display: flex;
@@ -19,6 +27,11 @@
         img {
             width: 150px;
         }
+        
+        .safe-img {
+            width: 70px;
+        }
+        
         
         p {
             max-width: 200px;
@@ -36,11 +49,19 @@
     }
 }
 
+.separator {
+    height: 1px;
+    width: 90%;
+    margin: 0 auto;
+    background-color: grey;
+}
+
 
 @media (min-width: 768px) { 
     
     .primary__first-img-container { 
         display: flex;
         justify-content: space-around;
+        align-items: center;
     }
 }
