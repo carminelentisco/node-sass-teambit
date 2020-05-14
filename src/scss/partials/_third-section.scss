@@ -1,0 +1,65 @@
+/*******************************************************************************
+*                             THIRD SECTION                                    *
+*******************************************************************************/
+
+.third__section {
+    background-color: $third__section-background;
+    text-align: center;
+    padding: 20px;
+    
+    & > img {
+        padding: 30px;
+    }
+
+    & > span {
+        display: inline-block;
+        margin-top: 30px;
+    }
+}
+
+.third__text-box {
+    background-color: $white;
+    border-radius: 10px;
+    border: 1px solid grey;
+    text-align: start;
+    padding: 30px;
+
+    p {
+        padding: 0 0 20px 0;
+    }
+}
+
+.founders {
+    @include flex(row, center, flex-start);
+    .founders__image {
+        
+        img {
+            height: 40px;
+            padding-right: 8px;
+        }
+    }
+
+    .founders__text {
+
+        span:first-of-type {
+            font-size: 13px;
+            color: $blue;
+            font-weight: bold;
+            display: block;
+        }
+
+        span:last-of-type {
+            font-size: 11px;
+        }
+    }
+}
+
+@media (min-width: 992px) {
+    .third__section {
+        @include flex (column, center);
+    
+        .third__text-box {
+            width: 35%;
+        }
+    }
+}
