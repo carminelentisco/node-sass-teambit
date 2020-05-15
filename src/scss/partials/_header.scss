@@ -52,6 +52,7 @@
             align-items: flex-start;
             position: relative;
             @include list-style;
+            padding: 0 20px;
   
             &:hover {
                 color: $blue-menu-hov;
