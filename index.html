@@ -9,32 +9,45 @@
 </head>
 <body>
 
-    <header class="header">
-        <section class="container header-nav">
+    <header>
+
+        <nav class=" container header-nav">
 
             <img src="assets/logo.svg" alt="#">
-            <i class="fas fa-bars menu-icon"></i>
+            <i id="mobile__menu-icon" class="fas fa-bars menu-icon"></i>
 
-            <nav class="menu-container">
-                <ul class="menu-list">
-                    <li>
-                        Soluzioni
-                        <i class="fas fa-sort-down arrow"></i>
-                        <ul class="sub-menu">
-                            <li>feedBack</li>
-                            <li>Sondaggi</li>
-                            <li>Recensioni</li>
-                            <li>Lode</li>
-                        </ul>                 
-                    </li>
-                    <li>Prezzi</li>
-                    <li>Blog</li>
-                    <li>Registrati</li>
-                    <li class="google-btn"><img src="assets/google-logo.svg" alt="#"> Iscriviti</li>
-                </ul>
-            </nav>
+            <!-- Mobile list menu -->
+            <ul class="menu-list-mobile">
+                <li><a href="#">Feedback</a></li>
+                <li><a href="#">Surveys</a></li>
+                <li><a href="#">Reviews</a></li>
+                <li><a href="#">Praise</a></li>
+                <li><a href="#">Pricing</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Sing in</a></li>
+                <li class="google-btn"><img src="assets/google-logo.svg" alt="#"><a href="#">sing Up</a></li>
+            </ul>
 
-        </section>
+            <!-- Descktop list menu -->
+            <ul class="menu-list-descktop">
+                <li>
+                    <a href="#">Soluzioni</a>
+                    <i class="fas fa-sort-down arrow"></i>
+                    <ul class="sub-menu">
+                        <li><a href="#">feedBack</a></li>
+                        <li><a href="#">sondaggi</a></li>
+                        <li><a href="#">recensioni</a></li>
+                        <li><a href="#">lode</a></li>
+                    </ul>                 
+                </li>
+                <li><a href="#">prezzi</a></li>
+                <li><a href="#">blog</a></li>
+                <li><a href="#">registrati</a></li>
+                <li class="google-btn"><img src="assets/google-logo.svg" alt="#"> Iscriviti</li>
+            </ul>
+
+        </nav>
+
     </header>
 
     <main>
