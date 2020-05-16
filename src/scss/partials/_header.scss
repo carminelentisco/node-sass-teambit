@@ -1,34 +1,79 @@
+/*******************************************************************************
+*                                    HEADER                                    *
+*******************************************************************************/
 
-.header {
+header {
     background-color: #fff;
     .header-nav {
         height: 75px;
         padding: 0 15px;
-        border-bottom: 1px solid $brown;
         display: flex;
         align-items: center;
         justify-content: space-between;
+        border-bottom: 1px solid $brown;
+        position: relative;
 
-        & img {
+        img {
             cursor: pointer;
         }
 
-        & .menu-icon {
+        .menu-icon {
             font-size: 20px;
             color: $brown;
             cursor: pointer;
         }
+    }
 
-        & .menu-container {
-            display: none;
+    .menu-list-descktop {
+        display: none;
+    }
+
+    .menu-list-mobile {
+        display: none;
+        width: 100%;
+        position: absolute;
+        top: 75px;
+        left: 0;
+        background-color: $white;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+        box-shadow: 0 10px 15px;
+
+        @include list-style;
+        @include menu-list-item;
+        
+        li {
+            padding: 10px 20px;
+        }
+        
+        
+    }
+
+    .google-btn {
+        padding: 10px;
+        border: 1px solid $button-blue;
+        border-radius: 5px;
+        transition: background .4s;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        img {
+            height: 20px;
+            margin-right: 5px;
+        }
+
+        &:hover,
+        &:hover a {
+            background-color: $blue-menu-hov;
+            color: #fff;
         }
 
     }
-
 }
 
 @media (min-width: 768px) { 
-    .header {
+
+    header {
         .header-nav {
             .menu-icon {
                 display: none;
@@ -38,74 +83,38 @@
                 display: block;
             }
         }
+
+        .menu-list-mobile {
+            display: none;
+        }
+
+        .menu-list-descktop {
+            @include vertical-align-flex;
+            @include menu-list-item;
+            
+            i {
+                margin-left: 5px;
+            }
+    
+            .sub-menu {
+                @include list-style;
+                @include sub-menu;
+    
+                li {
+                    padding: 10px;
+                }
+    
+            }
+            
+            .google-btn {
+                display: flex;
+                align-items: center;
+                padding: 5px;
+            }
+    
+        }    
   
     }
-
-    .menu-list {
-        display:flex;
-        @include vertical-align-flex;
-        
-        li {
-            font-size: 13px;
-            font-weight: bold;
-            display: flex;
-            align-items: flex-start;
-            position: relative;
-            @include list-style;
-            padding: 0 20px;
-  
-            &:hover {
-                color: $blue-menu-hov;
-            }
-
-        }
-        
-        i {
-            margin-left: 5px;
-        }
-
-        .sub-menu {
-            display: none;
-            position: absolute;
-            top: 25px;
-            left: 11px;
-            padding: 5px;
-            border-radius: 10px;
-            box-shadow: 0 0 5px #000;
-            background-color: #fff;
-
-            li {
-                padding: 10px;
-            }
-
-        } 
-
-        .google-btn {
-            padding: 5px;
-            border: 1px solid $button-blue;
-            border-radius: 5px;
-            @include vertical-align-flex;
-            transition: background .4s;
-            
-            img {
-                height: 20px;
-                margin-right: 5px;
-            }
-
-            &:hover {
-                background-color: $blue-menu-hov;
-                color: #fff;
-            }
-
-        }
-    }    
+ 
 }
 
-
-/*
-// Large devices (desktops, 992px and up)
-@media (min-width: 992px) { ... }
-
-// Extra large devices (large desktops, 1200px and up)
-@media (min-width: 1200px) { ... }
-*/
