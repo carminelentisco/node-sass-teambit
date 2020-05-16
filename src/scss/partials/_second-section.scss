@@ -54,7 +54,7 @@
     }
 
     .second__block {
-        @include flex (raw, centre);
+        @include flex (row, center);
         
         img { 
             width: 50%;
